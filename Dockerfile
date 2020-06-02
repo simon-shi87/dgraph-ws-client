@@ -21,7 +21,7 @@ RUN cargo build --release
 FROM debian:buster-slim
 
 ENV RUST_LOG=info
-ENV DGRAPH_ALPHAS=http://localhost:9080
+ENV DGRAPH_ALPHAS=http://envoy.envoy.svc.cluster.local:9080
 
 EXPOSE 9001
 EXPOSE 9002
